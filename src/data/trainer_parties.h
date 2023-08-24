@@ -3215,38 +3215,45 @@ static const struct TrainerMonNoItemCustomMoves sParty_Walter5[] = {
 static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     {
     .iv = 250,
-    .lvl = 46,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 56,
+    .species = SPECIES_HOUNDOOM,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROAR, MOVE_DOUBLE_EDGE, MOVE_SAND_ATTACK, MOVE_CRUNCH}
+    .moves = {MOVE_ROAR, MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_SLUDGE_BOMB}
     },
     {
     .iv = 250,
-    .lvl = 48,
-    .species = SPECIES_SHIFTRY,
+    .lvl = 57,
+    .species = SPECIES_SCRAFTY,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TORMENT, MOVE_DOUBLE_TEAM, MOVE_SWAGGER, MOVE_EXTRASENSORY}
+    .moves = {MOVE_HEAD_SMASH, MOVE_SUCKER_PUNCH, MOVE_POISON_JAB, MOVE_HIGH_JUMP_KICK}
     },
     {
     .iv = 250,
-    .lvl = 46,
-    .species = SPECIES_CACTURNE,
+    .lvl = 57,
+    .species = SPECIES_HONCHKROW,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_LEECH_SEED, MOVE_FEINT_ATTACK, MOVE_NEEDLE_ARM, MOVE_COTTON_SPORE}
+    .moves = {MOVE_NASTY_PLOT, MOVE_DARK_PULSE, MOVE_AIR_SLASH, MOVE_HEAT_WAVE}
     },
     {
     .iv = 250,
-    .lvl = 48,
-    .species = SPECIES_CRAWDAUNT,
+    .lvl = 58,
+    .species = SPECIES_GRIMMSNARL,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SURF, MOVE_SWORDS_DANCE, MOVE_STRENGTH, MOVE_FACADE}
+    .moves = {MOVE_PLAY_ROUGH, MOVE_SUCKER_PUNCH, MOVE_HAMMER_ARM, MOVE_BULK_UP}
+    },
+    {
+    .iv = 250,
+    .lvl = 58,
+    .species = SPECIES_BISHARP,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NIGHT_SLASH, MOVE_SWORDS_DANCE, MOVE_METAL_CLAW, MOVE_PSYCHO_CUT}
     },
     {
     .iv = 255,
-    .lvl = 49,
+    .lvl = 59,
     .species = SPECIES_ABSOL,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_AERIAL_ACE, MOVE_ROCK_SLIDE, MOVE_SWORDS_DANCE, MOVE_SLASH}
+    .moves = {MOVE_NIGHT_SLASH, MOVE_ICE_BEAM, MOVE_PLAY_ROUGH, MOVE_STONE_EDGE}
     }
 };
 
