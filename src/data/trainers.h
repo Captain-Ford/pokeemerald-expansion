@@ -370,7 +370,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Matt),
+        .party = ITEM_CUSTOM_MOVES(sParty_Matt),
     },
 
     [TRAINER_ZANDER] =
@@ -406,7 +406,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_ShellySeafloorCavern),
+        .party = ITEM_CUSTOM_MOVES(sParty_ShellySeafloorCavern),
     },
 
     [TRAINER_ARCHIE] =
@@ -418,7 +418,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Archie),
+        .party = ITEM_CUSTOM_MOVES(sParty_Archie),
     },
 
     [TRAINER_LEAH] =
@@ -7222,7 +7222,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MaxieMagmaHideout),
+        .party = ITEM_CUSTOM_MOVES(sParty_MaxieMagmaHideout),
     },
 
     [TRAINER_MAXIE_MT_CHIMNEY] =
