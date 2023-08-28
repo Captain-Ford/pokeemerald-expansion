@@ -5590,7 +5590,7 @@ static void ReturnFromBattleToOverworld(void)
     gMain.inBattle = FALSE;
     gMain.callback1 = gPreBattleCallback1;
 
-    if (gBattleTypeFlags & BATTLE_TYPE_ROAMER)
+    if (gBattleTypeFlags & BATTLE_TYPE_ROAMER && DoesRoamerFlee())
     {
         if (gBattleOutcome == B_OUTCOME_CAUGHT || ((gBattleOutcome & B_OUTCOME_WON) && !CanRoamerRespawn(gEncounteredRoamerIndex)))
             StopRoamer(gEncounteredRoamerIndex);
