@@ -88,6 +88,7 @@ const struct WildPokemonHeader {{ wild_encounter_group.label }}[] =
         .rockSmashMonsInfo = {% if existsIn(encounter, "rock_smash_mons") %}&{{ encounter.base_label }}_RockSmashMonsInfo{% else %}NULL{% endif %},
         .fishingMonsInfo = {% if existsIn(encounter, "fishing_mons") %}&{{ encounter.base_label }}_FishingMonsInfo{% else %}NULL{% endif %},
 		.hiddenMonsInfo = {% if existsIn(encounter, "hidden_mons") %}&{{ encounter.base_label }}_HiddenMonsInfo{% else %}NULL{% endif %},
+        .headbuttMonsInfo = {% if existsIn(encounter, "headbutt_mons") %}&{{ encounter.base_label }}_HeadbuttMonsInfo{% else %}NULL{% endif %},
     },
 ## endfor
     {
@@ -98,6 +99,6 @@ const struct WildPokemonHeader {{ wild_encounter_group.label }}[] =
         .rockSmashMonsInfo = NULL,
         .fishingMonsInfo = NULL,
 		.hiddenMonsInfo = NULL,
+        .headbuttMonsInfo = NULL,
     },
 };
-## endfor
