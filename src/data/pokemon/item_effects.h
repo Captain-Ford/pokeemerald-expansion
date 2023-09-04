@@ -69,7 +69,7 @@ const u8 gItemEffect_MaxRevive[7] = {
 const u8 gItemEffect_FreshWater[7] = {
     [4] = ITEM4_HEAL_HP,
 #if I_HEALTH_RECOVERY >= GEN_7
-    [6] = 30, // Amount of HP to recover
+    [6] = 40, // Amount of HP to recover
 #else
     [6] = 50, // Amount of HP to recover
 #endif
@@ -78,7 +78,7 @@ const u8 gItemEffect_FreshWater[7] = {
 const u8 gItemEffect_SodaPop[7] = {
     [4] = ITEM4_HEAL_HP,
 #if I_HEALTH_RECOVERY >= GEN_7
-    [6] = 50, // Amount of HP to recover
+    [6] = 60, // Amount of HP to recover
 #else
     [6] = 60, // Amount of HP to recover
 #endif
@@ -87,7 +87,7 @@ const u8 gItemEffect_SodaPop[7] = {
 const u8 gItemEffect_Lemonade[7] = {
     [4] = ITEM4_HEAL_HP,
 #if I_HEALTH_RECOVERY >= GEN_7
-    [6] = 70, // Amount of HP to recover
+    [6] = 80, // Amount of HP to recover
 #else
     [6] = 80, // Amount of HP to recover
 #endif
@@ -102,26 +102,26 @@ const u8 gItemEffect_EnergyPowder[10] = {
     [4] = ITEM4_HEAL_HP,
     [5] = ITEM5_FRIENDSHIP_ALL,
 #if I_HEALTH_RECOVERY >= GEN_7
-    [6] = 60, // Amount of HP to recover
+    [6] = 100, // Amount of HP to recover
 #else
     [6] = 50, // Amount of HP to recover
 #endif
     [7] = -5, // Friendship change, low
     [8] = -5, // Friendship change, mid
-    [9] = -10, // Friendship change, high
+    [9] = -5, // Friendship change, high
 };
 
 const u8 gItemEffect_EnergyRoot[10] = {
     [4] = ITEM4_HEAL_HP,
     [5] = ITEM5_FRIENDSHIP_ALL,
 #if I_HEALTH_RECOVERY >= GEN_7
-    [6] = 120, // Amount of HP to recover
+    [6] = 200, // Amount of HP to recover
 #else
     [6] = 200, // Amount of HP to recover
 #endif
     [7] = -10, // Friendship change, low
     [8] = -10, // Friendship change, mid
-    [9] = -15, // Friendship change, high
+    [9] = -10, // Friendship change, high
 };
 
 const u8 gItemEffect_HealPowder[9] = {
@@ -129,7 +129,7 @@ const u8 gItemEffect_HealPowder[9] = {
     [5] = ITEM5_FRIENDSHIP_ALL,
     [6] = -5,  // Friendship change, low
     [7] = -5,  // Friendship change, mid
-    [8] = -10, // Friendship change, high
+    [8] = -5, // Friendship change, high
 };
 
 const u8 gItemEffect_RevivalHerb[10] = {
@@ -138,7 +138,7 @@ const u8 gItemEffect_RevivalHerb[10] = {
     [6] = ITEM6_HEAL_HP_FULL,
     [7] = -15, // Friendship change, low
     [8] = -15, // Friendship change, mid
-    [9] = -20, // Friendship change, high
+    [9] = -15, // Friendship change, high
 };
 
 const u8 gItemEffect_Ether[7] = {
