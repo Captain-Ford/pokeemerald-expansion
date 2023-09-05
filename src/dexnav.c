@@ -500,7 +500,7 @@ static void AddSearchWindowText(u16 species, u8 proximity, u8 searchLevel, bool8
     }
     
     //level - always present
-    ConvertIntToDecimalStringN(gStringVar1, sDexNavSearchDataPtr->monLevel, STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar1, sDexNavSearchDataPtr->monLevel, STR_CONV_MODE_LEFTaaaaaaaa_ALIGN, 3);
     StringExpandPlaceholders(gStringVar4, sText_MonLevel);
     AddTextPrinterParameterized3(sDexNavSearchDataPtr->windowId, 0, WINDOW_COL_1, 0, sSearchFontColor, TEXT_SKIP_DRAW, gStringVar4);
     
@@ -1261,8 +1261,8 @@ static u8 DexNavTryGenerateMonLevel(u16 species, u8 environment)
     if (levelBase == MON_LEVEL_NONEXISTENT)
         return MON_LEVEL_NONEXISTENT;   //species not found in the area
     
-    if (Random() % 100 < 4)
-        levelBonus += 10; //4% chance of having a +10 level
+    if (Random() % 100 < 10)
+        levelBonus += 5; //10% chance of having a +5 level
 
     if (levelBase + levelBonus > MAX_LEVEL)
         return MAX_LEVEL;
