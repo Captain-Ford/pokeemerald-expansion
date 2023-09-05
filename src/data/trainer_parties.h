@@ -4105,37 +4105,37 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
     .iv = 200,
     .lvl = 30,
-    .species = SPECIES_NUMEL,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_OVERHEAT, MOVE_TAKE_DOWN, MOVE_MAGNITUDE, MOVE_SUNNY_DAY}
+    .species = SPECIES_PONYTA,
+    .heldItem = ITEM_HEAT_ROCK,
+    .moves = {MOVE_FLAME_CHARGE, MOVE_JUMP_KICK, MOVE_BOUNCE, MOVE_SUNNY_DAY}
     },
     {
     .iv = 200,
     .lvl = 30,
-    .species = SPECIES_SLUGMA,
+    .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OVERHEAT, MOVE_SMOG, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY}
+    .moves = {MOVE_FLAMETHROWER, MOVE_DAZZLING_GLEAM, MOVE_ENERGY_BALL, MOVE_SUNNY_DAY}
     },
     {
     .iv = 250,
     .lvl = 32,
-    .species = SPECIES_CAMERUPT,
+    .species = SPECIES_SALAZZLE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OVERHEAT, MOVE_TACKLE, MOVE_SUNNY_DAY, MOVE_ATTRACT}
+    .moves = {MOVE_OVERHEAT, MOVE_SLUDGE_BOMB, MOVE_ACID_SPRAY, MOVE_NASTY_PLOT}
     },
     {
     .iv = 250,
     .lvl = 32,
-    .species = SPECIES_CAMERUPT,
+    .species = SPECIES_DARMANITAN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OVERHEAT, MOVE_TACKLE, MOVE_SUNNY_DAY, MOVE_ATTRACT}
+    .moves = {MOVE_FIRE_PUNCH, MOVE_OVERHEAT, MOVE_MEGA_PUNCH, MOVE_THUNDER_PUNCH}
     },
     {
     .iv = 250,
     .lvl = 34,
-    .species = SPECIES_TORKOAL,
+    .species = SPECIES_MAGMAR,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_BODY_SLAM, MOVE_ATTRACT}
+    .moves = {MOVE_OVERHEAT, MOVE_FOCUS_BLAST, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM}
     }
 };
 
@@ -9079,7 +9079,7 @@ static const struct TrainerMonItemCustomMoves sParty_TabithaMtChimney[] = {
     {
     .iv = 200,
     .lvl = 27,
-    .species = SPECIES_KROOKODILE,
+    .species = SPECIES_KROKOROK,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_BITE, MOVE_BULLDOZE, MOVE_ROCK_TOMB, MOVE_PURSUIT}
     },
@@ -9181,7 +9181,7 @@ static const struct TrainerMonItemCustomMoves sParty_MaxieMtChimney[] = {
     {
     .iv = 200,
     .lvl = 28,
-    .species = SPECIES_KROOKODILE,
+    .species = SPECIES_KROKOROK,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_BITE, MOVE_BULLDOZE, MOVE_ROCK_TOMB, MOVE_PURSUIT}
     },
@@ -12615,7 +12615,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery5[] = {
     .lvl = 53,
     .species = SPECIES_SALAZZLE,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_FIRE_BLAST, MOVE_SLUDGE_BOMB, MOVE_NASTY_PLOT, MOVE_ROCK_SLIDE}
+    .moves = {MOVE_FIRE_BLAST, MOVE_SLUDGE_BOMB, MOVE_NASTY_PLOT, MOVE_ACID_SPRAY}
     },
     {
     .iv = 255,

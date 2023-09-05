@@ -207,7 +207,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 120,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FLYING,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -326,7 +326,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_BIND] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .accuracy = 85,
+            .accuracy = 100,
         #else
             .accuracy = 100,
         #endif
@@ -5579,15 +5579,15 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_SAND_TOMB] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .power = 35,
-            .accuracy = 85,
+            .power = 60,
+            .accuracy = 100,
         #else
             .power = 15,
             .accuracy = 70,
         #endif
         .effect = EFFECT_TRAP,
         .type = TYPE_GROUND,
-        .pp = 15,
+        .pp = 20,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
