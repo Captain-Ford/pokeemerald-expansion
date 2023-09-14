@@ -87,7 +87,7 @@
  *   SINGLE_BATTLE_TEST("Stun Spore does not affect Grass-types")
  *   {
  *       GIVEN {
- *           ASSUME(gBattleMoves[MOVE_STUN_SPORE].flags & FLAG_POWDER);
+ *           ASSUME(gBattleMoves[MOVE_STUN_SPORE].powderMove);
  *           ASSUME(gSpeciesInfo[SPECIES_ODDISH].types[0] == TYPE_GRASS);
  *           PLAYER(SPECIES_ODDISH); // 1.
  *           OPPONENT(SPECIES_ODDISH); // 2.
@@ -796,6 +796,8 @@ struct MoveContext
     u16 explicitSecondaryEffect:1;
     u16 megaEvolve:1;
     u16 explicitMegaEvolve:1;
+    u16 ultraBurst:1;
+    u16 explicitUltraBurst:1;
     // TODO: u8 zMove:1;
     u16 allowed:1;
     u16 explicitAllowed:1;

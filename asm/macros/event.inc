@@ -2052,3 +2052,10 @@
     .macro dynmultistack left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req
 	_dynmultichoice \left, \top, \ignoreBPress, \maxBeforeScroll, \shouldSort, \initialSelected, \callbacks, NULL
 	.endm
+	
+	.macro ai_vs_ai_battle trainer1:req, trainer2:req
+	setflag B_FLAG_AI_VS_AI_BATTLE
+	setvar VAR_0x8004, \trainer1
+	callnative CreateTrainerPartyForPlayer
+	trainerbattle_no_intro \trainer2, NULL
+	.endm
