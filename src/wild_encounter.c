@@ -1161,6 +1161,7 @@ void HeadbuttWildEncounter(void)
     {
         gSpecialVar_Result = FALSE;
     }
+}
 
 bool8 StandardWildEncounter_Debug(void)
 {
