@@ -2389,7 +2389,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_7
             .power = 80,
-            .pp = 10,
+            .pp = 15,
         #else
             .power = 20,
             .pp = 15,
@@ -12523,9 +12523,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_STONE_AXE] =
     {
         .effect = EFFECT_HIT_SET_ENTRY_HAZARD,
-        .power = 65,
+        .power = 80,
         .type = TYPE_ROCK,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
