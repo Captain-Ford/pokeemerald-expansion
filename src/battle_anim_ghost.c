@@ -98,6 +98,7 @@ const struct SpriteTemplate gShadowBallSpriteTemplate =
     .callback = AnimShadowBall,
 };
 
+
 const struct SpriteTemplate gEnergyBallSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ENERGY_BALL,

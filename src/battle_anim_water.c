@@ -190,6 +190,38 @@ const struct SpriteTemplate gHydroPumpOrbSpriteTemplate =
     .callback = AnimToTargetInSinWave,
 };
 
+const struct SpriteTemplate gEnergyOrbSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_YELLOW_BALL,
+    .paletteTag = ANIM_TAG_YELLOW_BALL,
+    .oam = &gOamData_AffineOff_ObjBlend_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimToTargetInSinWave,
+};
+
+
+static const union AnimCmd sAnimCmdAnimatedSpark2[] = {
+	ANIMCMD_FRAME((8 * 8) / (16 * 16) * 0, 8),
+	ANIMCMD_FRAME((8 * 8) / (16 * 16) * 1, 8),
+	ANIMCMD_FRAME((8 * 8) / (16 * 16) * 2, 8),
+	ANIMCMD_JUMP(0)
+};
+static const union AnimCmd *const sAnimCmdTable_AnimatedSpark2[] = {
+	sAnimCmdAnimatedSpark2,
+};
+const struct SpriteTemplate gSparkBeamSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SPARK_2,
+    .paletteTag = ANIM_TAG_SPARK_2,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = sAnimCmdTable_AnimatedSpark2,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimToTargetInSinWave,
+};
+
 const struct SpriteTemplate gWaterPledgeOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_WATER_ORB,
@@ -569,6 +601,17 @@ const struct SpriteTemplate gAquaTailKnockOffSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SLAM_HIT_2,
     .paletteTag = ANIM_TAG_WATER_IMPACT,
+    .oam = &gOamData_AffineNormal_ObjNormal_64x64,
+    .anims = gKnockOffAquaTailAnim,
+    .images = NULL,
+    .affineAnims = gKnockOffAquaTailAffineAnim,
+    .callback = AnimKnockOffAquaTail,
+};
+
+const struct SpriteTemplate gIronTailKnockOffSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SLAM_HIT_2,
+    .paletteTag = ANIM_TAG_STEAMROLLER,
     .oam = &gOamData_AffineNormal_ObjNormal_64x64,
     .anims = gKnockOffAquaTailAnim,
     .images = NULL,

@@ -344,7 +344,6 @@ const struct SpriteTemplate gSkyAttackBirdSpriteTemplate =
     .callback = AnimSkyAttackBird,
 };
 
-
 void AnimEllipticalGust(struct Sprite *sprite)
 {
     InitSpritePosToAnimTarget(sprite, FALSE);

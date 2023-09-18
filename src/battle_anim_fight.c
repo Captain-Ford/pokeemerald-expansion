@@ -253,6 +253,7 @@ static const union AffineAnimCmd *const sAffineAnims_SuperpowerOrb[] =
     sAffineAnim_SuperpowerOrb,
 };
 
+
 const struct SpriteTemplate gSuperpowerOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CIRCLE_OF_LIGHT,
@@ -412,15 +413,35 @@ const struct SpriteTemplate gPalmSpriteTemplate =
 	.callback = AnimBasicFistOrFoot,
 };
 
+static const union AffineAnimCmd sSpriteAffineAnim_DoNothing[] =
+{
+    AFFINEANIMCMD_FRAME(64, 64, 0, 1), //Do nothing
+    AFFINEANIMCMD_END
+};
+static const union AffineAnimCmd sSpriteAffineAnim_PhotonGeyserBeam[] =
+{
+    AFFINEANIMCMD_FRAME(0, 0, 0, 16), //Delay
+    AFFINEANIMCMD_FRAME(64, 64, 0, 4), //Double in size
+    //Pulsate
+    AFFINEANIMCMD_FRAME(-128, -128, 0, 1),
+    AFFINEANIMCMD_FRAME(128, 128, 0, 1),
+    AFFINEANIMCMD_JUMP(2),
+};
+static const union AffineAnimCmd* const sSpriteAffineAnimTable_PhotonGeyserBeam[] =
+{
+    sSpriteAffineAnim_DoNothing,
+    sSpriteAffineAnim_PhotonGeyserBeam,
+};
+
 const struct SpriteTemplate gAuraSphereBlast =
 {
 	.tileTag = ANIM_TAG_CIRCLE_OF_LIGHT,
-	.paletteTag = ANIM_TAG_CIRCLE_OF_LIGHT,
+	.paletteTag = ANIM_TAG_WATER_DROPLET,
 	.oam = &gOamData_AffineOff_ObjNormal_64x64,
 	.anims = gDummySpriteAnimTable,
 	.images = NULL,
-	.affineAnims = gDummySpriteAffineAnimTable,
-	.callback = AnimSuperpowerFireball,
+	.affineAnims = sSpriteAffineAnimTable_PhotonGeyserBeam,
+	.callback = TranslateAnimSpriteToTargetMonLocation,
 };
 
 const union AffineAnimCmd gForcePalmAffineAnimCmd_1[] =

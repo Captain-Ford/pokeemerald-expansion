@@ -979,6 +979,29 @@ const struct SpriteTemplate gHiddenPowerOrbScatterSpriteTemplate =
     .callback = AnimOrbitScatter,
 };
 
+const struct SpriteTemplate gMagnetBombSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BLACK_BALL_2,
+    .paletteTag = ANIM_TAG_BLACK_BALL_2,
+    .oam = &gOamData_AffineNormal_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gHiddenPowerOrbAffineAnimTable,
+    .callback = AnimOrbitFast,
+};
+
+const struct SpriteTemplate gMagnetBombScatterSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BLACK_BALL_2,
+    .paletteTag = ANIM_TAG_BLACK_BALL_2,
+    .oam = &gOamData_AffineDouble_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gHiddenPowerOrbAffineAnimTable,
+    .callback = AnimOrbitScatter,
+};
+
+
 const struct SpriteTemplate gPowerGemOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_POWER_GEM,

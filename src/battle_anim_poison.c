@@ -294,6 +294,17 @@ const struct SpriteTemplate gGunkShoParticlesSpriteTemplate =
     .callback = AnimGunkShotParticles,
 };
 
+const struct SpriteTemplate gGunkShotParticlesSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_POISON_BUBBLE,
+    .paletteTag = ANIM_TAG_POISON_BUBBLE,
+    .oam = &gOamData_AffineOff_ObjBlend_16x16,
+    .anims = gAnims_PoisonProjectile,
+    .images = NULL,
+    .affineAnims = gAffineAnims_PoisonProjectile,
+    .callback = AnimGunkShotParticles,
+};
+
 const struct SpriteTemplate gGunkShotImpactSpriteTemplate =
 {
     .tileTag = ANIM_TAG_WATER_IMPACT,

@@ -1957,6 +1957,17 @@ const struct SpriteTemplate gLightOfRuinPinkExplosionTemplate =
     .callback = AnimSpriteOnMonPos
 };
 
+const struct SpriteTemplate gElectricExplosionTemplate =
+{
+    .tileTag = ANIM_TAG_EXPLOSION,
+    .paletteTag = ANIM_TAG_ELECTRICITY,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gExplosionAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSpriteOnMonPos
+};
+
 //origin pulse
 const struct SpriteTemplate gOriginPulseRingTemplate =
 {

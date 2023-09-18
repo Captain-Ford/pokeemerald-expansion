@@ -490,6 +490,17 @@ const struct SpriteTemplate gGrowingShockWaveOrbSpriteTemplate =
     .callback = AnimGrowingShockWaveOrb,
 };
 
+const struct SpriteTemplate gGrowingAuraWaveOrbSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_CIRCLE_OF_LIGHT,
+    .paletteTag = ANIM_TAG_WATER_DROPLET,
+    .oam = &gOamData_AffineNormal_ObjBlend_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gAffineAnims_GrowingElectricOrb,
+    .callback = AnimGrowingShockWaveOrb,
+};
+
 const struct SpriteTemplate gShockWaveProgressingBoltSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SPARK,
