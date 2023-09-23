@@ -154,6 +154,7 @@ static void AnimTask_DoubleTeam_Step(u8);
 static void AnimDoubleTeam(struct Sprite *);
 static void AnimNightSlash(struct Sprite *);
 static void AnimRockPolishStreak(struct Sprite *);
+static void AnimRandomSlashes(struct Sprite *);
 static void AnimRockPolishSparkle(struct Sprite *);
 static void AnimPoisonJabProjectile(struct Sprite *);
 static void AnimNightSlash(struct Sprite *);
@@ -2690,6 +2691,17 @@ const struct SpriteTemplate gRockPolishStreakSpriteTemplate =
     .images = NULL,
     .affineAnims = gRockPolishStreak_AffineAnimCmds,
     .callback = AnimRockPolishStreak,
+};
+
+const struct SpriteTemplate gRandomSlashesSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_WHITE_STREAK,
+    .paletteTag = ANIM_TAG_WHITE_STREAK,
+    .oam = &gOamData_AffineDouble_ObjBlend_32x8,
+    .anims = gRockPolishStreak_AnimCmds,
+    .images = NULL,
+    .affineAnims = gRockPolishStreak_AffineAnimCmds,
+    .callback = AnimRandomSlashes,
 };
 
 const union AnimCmd gRockPolishSparkle_AnimCmd1[] =
@@ -6903,6 +6915,14 @@ static void AnimRockPolishStreak(struct Sprite *sprite)
     sprite->callback = RunStoredCallbackWhenAnimEnds;
 }
 
+static void AnimRandomSlashes(struct Sprite *sprite)
+{
+    int affineAnimNum = Random2() % ARRAY_COUNT(gRockPolishStreak_AffineAnimCmds);
+    InitSpritePosToAnimTarget(sprite, TRUE);
+    StartSpriteAffineAnim(sprite, affineAnimNum);
+    StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
+    sprite->callback = RunStoredCallbackWhenAnimEnds;
+}
 // Places a blue sparkle that plays its default animation.
 // arg 0: initial x pixel offset
 // arg 1: initial y pixel offset
