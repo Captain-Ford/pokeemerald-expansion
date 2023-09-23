@@ -4798,19 +4798,82 @@ Move_WONDER_ROOM::
 	end
 
 Move_PSYSHOCK:
+	loadspritegfx ANIM_TAG_RED_ORB_2
+	loadspritegfx ANIM_TAG_POISON_JAB
+	loadspritegfx ANIM_TAG_GRAY_SMOKE
+	loadspritegfx ANIM_TAG_WISP_FIRE
 	monbg ANIM_TARGET
 	setalpha 8, 8
+	playsewithpan SE_M_SUPERSONIC, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 10, 1
-	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 0, 2, 0, 8, RGB(31, 23, 0)
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 0, 2, 0, 8, RGB_WHITE
 	waitforvisualfinish
-	loopsewithpan SE_M_SUPERSONIC, SOUND_PAN_TARGET, 10, 3
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 15, 1
-	createvisualtask AnimTask_ScaleMonAndRestore, 5, -6, -6, 15, ANIM_TARGET, 1
+	delay 10
+	call PsyshockConverge
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
 	blendoff
 	end
 
+PsyshockConverge:
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 40, 40, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, -40, -40, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 0, 40, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 0, -40, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 40, -20, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 40, 20, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, -40, -20, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, -40, 20, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, -20, 30, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 20, -30, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, -20, -30, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 20, 30, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, -40, 0, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockOrbSpriteTemplate, ANIM_TARGET, 2, 40, 0, 16
+	playsewithpan SE_M_SWIFT, SOUND_PAN_TARGET
+	delay 6
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 15, 1
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_TARGET, RGB_WHITE, 12, 0, 1
+	createsprite gPsyshockSmokeSpriteTemplate, ANIM_TARGET, 2, 8, 8, 1, 0
+	playsewithpan SE_M_SWAGGER, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockSmokeSpriteTemplate, ANIM_TARGET, 2, -8, -8, 1, 0
+	playsewithpan SE_M_SWAGGER, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockSmokeSpriteTemplate, ANIM_TARGET, 2, 8, -8, 1, 0
+	playsewithpan SE_M_SWAGGER, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPsyshockSmokeSpriteTemplate, ANIM_TARGET, 2, -8, 8, 1, 0
+	playsewithpan SE_M_SWAGGER, SOUND_PAN_TARGET
+	delay 2
+	return
+	
 Move_VENOSHOCK:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	loadspritegfx ANIM_TAG_TOXIC_BUBBLE
