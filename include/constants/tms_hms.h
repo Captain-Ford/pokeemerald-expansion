@@ -43,15 +43,65 @@
     F(ROCK_TOMB) \
     F(AERIAL_ACE) \
     F(TORMENT) \
-    F(FACADE) \
+    F(BODY_SLAM) \
     F(SECRET_POWER) \
     F(REST) \
     F(ATTRACT) \
     F(THIEF) \
     F(STEEL_WING) \
-    F(SKILL_SWAP) \
+    F(WILL_O_WISP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(FIRE_PUNCH) \
+    F(THUNDER_PUNCH) \
+    F(ICE_PUNCH) \
+    F(FIRE_FANG) \
+    F(THUNDER_FANG) \
+    F(ICE_FANG) \
+    F(DRAIN_PUNCH) \
+    F(LEECH_LIFE) \
+    F(ENERGY_BALL) \
+    F(AURA_SPHERE) \
+    F(FOCUS_BLAST) \
+    F(FLASH_CANNON) \
+    F(SIGNAL_BEAM) \
+    F(CHARGE_BEAM) \
+    F(SHADOW_CLAW) \
+    F(SHADOW_PUNCH) \
+    F(X_SCISSOR) \
+    F(NASTY_PLOT) \
+    F(PLAY_ROUGH) \
+    F(SUPERPOWER) \
+    F(ICY_WIND) \
+    F(THUNDER_WAVE) \
+    F(ANCIENT_POWER) \
+    F(SILVER_WIND) \
+    F(OMINOUS_WIND) \
+    F(ROCK_SLIDE) \
+    F(STONE_EDGE) \
+    F(BULLDOZE) \
+    F(DRAGON_PULSE) \
+    F(DRAGON_DANCE) \
+    F(WILD_CHARGE) \
+    F(POISON_JAB) \
+    F(VENOSHOCK) \
+    F(PSYSHOCK) \
+    F(TRICK_ROOM) \
+    F(DAZZLING_GLEAM) \
+    F(POWER_UP_PUNCH) \
+    F(DARK_PULSE) \
+    F(NIGHT_SLASH) \
+    F(WEATHER_BALL) \
+    F(MUD_SHOT) \
+    F(HEAT_WAVE) \
+    F(ZEN_HEADBUTT) \
+    F(IRON_HEAD) \
+    F(MOONBLAST) \
+    F(SEED_BOMB) \
+    F(EARTH_POWER) \
+    F(U_TURN) \
+    F(VOLT_SWITCH) \
+    F(GIGA_IMPACT)
 
 #define FOREACH_HM(F) \
     F(CUT) \

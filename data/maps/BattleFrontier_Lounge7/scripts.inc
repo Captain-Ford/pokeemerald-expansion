@@ -115,7 +115,7 @@ BattleFrontier_Lounge7_EventScript_Counter::
 
 BattleFrontier_Lounge7_EventScript_ThunderWave::
 	setvar VAR_0x8008, 48
-	setvar VAR_0x8005, MOVE_THUNDER_WAVE
+	setvar VAR_0x8005, MOVE_MIRROR_COAT
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 

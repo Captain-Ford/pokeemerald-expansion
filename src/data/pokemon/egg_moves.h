@@ -2512,6 +2512,7 @@ const u16 gEggMoves[] = {
         MOVE_HAMMER_ARM,
         MOVE_CURSE,
         MOVE_IRON_TAIL,
+        MOVE_METEOR_BEAM,
         MOVE_IRON_HEAD),
 
     egg_moves(SHIELDON,
@@ -2527,6 +2528,7 @@ const u16 gEggMoves[] = {
         MOVE_COUNTER,
         MOVE_STEALTH_ROCK,
         MOVE_WIDE_GUARD,
+        MOVE_METEOR_BEAM,
         MOVE_GUARD_SPLIT),
 
     egg_moves(PACHIRISU,
