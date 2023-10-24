@@ -91,7 +91,7 @@ Route113_EventScript_ItemHyperPotion::
 	end
 
 Route114_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+	finditem ITEM_TM_STONE_EDGE
 	end
 
 Route114_EventScript_ItemProtein::
@@ -211,7 +211,7 @@ Route120_EventScript_ItemRevive::
 	end
 
 Route121_EventScript_ItemCarbos::
-	finditem ITEM_CARBOS
+	finditem ITEM_TM_DAZZLING_GLEAM
 	end
 
 Route121_EventScript_ItemRevive::
@@ -223,7 +223,7 @@ Route121_EventScript_ItemZinc::
 	end
 
 Route123_EventScript_ItemCalcium::
-	finditem ITEM_CALCIUM
+	finditem ITEM_TM_ENERGY_BALL
 	end
 
 Route123_EventScript_ItemUltraBall::
@@ -395,11 +395,11 @@ MeteorFalls_1F_1R_EventScript_ItemPPUP::
 	end
 
 MeteorFalls_B1F_2R_EventScript_ItemTMDragonClaw::
-	finditem ITEM_TM_DRAGON_CLAW
+	finditem ITEM_TM_DRAGON_DANCE
 	end
 
 NewMauville_Inside_EventScript_ItemUltraBall::
-	finditem ITEM_ULTRA_BALL
+	finditem ITEM_TM_CHARGE_BEAM
 	end
 
 NewMauville_Inside_EventScript_ItemEscapeRope::

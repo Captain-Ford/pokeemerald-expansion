@@ -66,9 +66,9 @@
     F(FLASH_CANNON) \
     F(SIGNAL_BEAM) \
     F(CHARGE_BEAM) \
-    F(SHADOW_CLAW) \
     F(SHADOW_PUNCH) \
     F(X_SCISSOR) \
+    F(SWORDS_DANCE) \
     F(NASTY_PLOT) \
     F(PLAY_ROUGH) \
     F(SUPERPOWER) \

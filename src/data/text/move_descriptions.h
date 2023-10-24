@@ -269,8 +269,8 @@ static const u8 sAuroraBeamDescription[] = _(
     "beam that may lower Attack.");
 
 static const u8 sHyperBeamDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Powerful, but inaccurate.\n"
+    "");
 
 static const u8 sPeckDescription[] = _(
     "Attacks the foe with a\n"
@@ -533,8 +533,8 @@ static const u8 sClampDescription[] = _(
     "foe for "BINDING_TURNS" turns.");
 
 static const u8 sSwiftDescription[] = _(
-    "Sprays star-shaped rays\n"
-    "that never miss.");
+    "Star-shaped rays that never\n"
+    "miss and always strike first.");
 
 static const u8 sSkullBashDescription[] = _(
     "Tucks in the head, then\n"
@@ -625,8 +625,8 @@ static const u8 sAcidArmorDescription[] = _(
     "to sharply raise Defense.");
 
 static const u8 sCrabhammerDescription[] = _(
-    "Hammers with a pincer. Has a\n"
-    "high critical-hit ratio.");
+    "Hammers with a pincer.\n"
+    "May lower Defense.");
 
 static const u8 sExplosionDescription[] = _(
     "Inflicts severe damage but\n"
@@ -1125,8 +1125,8 @@ static const u8 sIngrainDescription[] = _(
     "The user can't switch out.");
 
 static const u8 sSuperpowerDescription[] = _(
-    "Boosts strength sharply,\n"
-    "but lowers abilities.");
+    "A strong attack, but lowers\n"
+    "Attack and Defense.");
 
 static const u8 sMagicCoatDescription[] = _(
     "Reflects special effects\n"
@@ -1457,8 +1457,8 @@ static const u8 sWakeUpSlapDescription[] = _(
     "foes, but also heals them.");
 
 static const u8 sHammerArmDescription[] = _(
-    "A swinging fist attack\n"
-    "that also lowers Speed.");
+    "A swinging fist attack.\n"
+    "May lower Defense.");
 
 static const u8 sGyroBallDescription[] = _(
     "A high-speed spin that does\n"
@@ -1661,8 +1661,8 @@ static const u8 sVacuumWaveDescription[] = _(
     "a wave that strikes first.");
 
 static const u8 sFocusBlastDescription[] = _(
-    "Attacks at full power.\n"
-    "May lower Sp. Def.");
+    "Heightens mental focus and\n"
+    "unleashes at full power.");
 
 static const u8 sEnergyBallDescription[] = _(
     "Draws power from nature to\n"
@@ -1746,7 +1746,7 @@ static const u8 sTrickRoomDescription[] = _(
 
 static const u8 sDracoMeteorDescription[] = _(
     "Casts comets onto the foe.\n"
-    "Harshly lowers the Sp. Atk.");
+    "");
 
 static const u8 sDischargeDescription[] = _(
     "Zaps the foes with electri-\n"
@@ -2858,8 +2858,8 @@ static const u8 sScaleShotDescription[] = _(
     "Ups Speed, lowers defense.");
 
 static const u8 sMeteorBeamDescription[] = _(
-    "A 2-turn move that raises\n"
-    "Sp. Attack before attacking.");
+    "Attacks with a beam of\n"
+    "spacial energy.");
 
 static const u8 sShellSideArmDescription[] = _(
     "Deals better of physical and\n"

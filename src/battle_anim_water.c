@@ -600,7 +600,7 @@ const union AffineAnimCmd *const gKnockOffAquaTailAffineAnim[] =
 const struct SpriteTemplate gAquaTailKnockOffSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SLAM_HIT_2,
-    .paletteTag = ANIM_TAG_WATER_IMPACT,
+    .paletteTag = ANIM_TAG_BUBBLE,
     .oam = &gOamData_AffineNormal_ObjNormal_64x64,
     .anims = gKnockOffAquaTailAnim,
     .images = NULL,
@@ -618,6 +618,18 @@ const struct SpriteTemplate gIronTailKnockOffSpriteTemplate =
     .affineAnims = gKnockOffAquaTailAffineAnim,
     .callback = AnimKnockOffAquaTail,
 };
+
+const struct SpriteTemplate gPowerWhipSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SLAM_HIT_2,
+    .paletteTag = ANIM_TAG_LEAF,
+    .oam = &gOamData_AffineNormal_ObjNormal_64x64,
+    .anims = gKnockOffAquaTailAnim,
+    .images = NULL,
+    .affineAnims = gKnockOffAquaTailAffineAnim,
+    .callback = AnimKnockOffAquaTail,
+};
+
 
 const struct SpriteTemplate gAquaTailHitSpriteTemplate =
 {

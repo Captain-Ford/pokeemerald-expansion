@@ -9,6 +9,8 @@ static void AnimDragonDanceOrb_Step(struct Sprite *);
 static void AnimOverheatFlame_Step(struct Sprite *);
 static void AnimTask_DragonDanceWaver_Step(u8);
 static void UpdateDragonDanceScanlineEffect(struct Task *);
+static void AnimDragonRushNew(struct Sprite *);
+static void AnimDragonRushNew_Step(struct Sprite *);
 static void AnimDragonRushStep(struct Sprite *sprite);
 static void AnimSpinningDracoMeteor(struct Sprite *sprite);
 static void AnimSpinningDracoMeteorFinish(struct Sprite *sprite);
@@ -251,6 +253,17 @@ const struct SpriteTemplate gDragonRushSpriteTemplate =
     .callback = AnimDragonRushStep,
 };
 
+const struct SpriteTemplate gDragonRushNewSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_DRAGON_ASCENT,
+    .paletteTag = ANIM_TAG_DRAGON_ASCENT,
+    .oam = &gOamData_AffineNormal_ObjNormal_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDragonRushNew,
+};
+
 const struct SpriteTemplate gDracoMetorSpriteTemplate =
 {
     .tileTag = ANIM_TAG_IMPACT,
@@ -272,6 +285,42 @@ const struct SpriteTemplate gDragonPulseSpriteTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = TranslateAnimSpriteToTargetMonLocation,
 };
+
+static void AnimDragonRushNew(struct Sprite *sprite)
+{
+    u16 rotation;
+    s16 posx = sprite->x;
+    s16 posy = sprite->y;
+
+    sprite->x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+    sprite->y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
+
+    sprite->data[4] = sprite->x << 4;
+    sprite->data[5] = sprite->y << 4;
+
+    sprite->data[6] = ((posx - sprite->x) << 4) / 12;
+    sprite->data[7] = ((posy - sprite->y) << 4) / 12;
+
+    rotation = ArcTan2Neg(posx - sprite->x, posy - sprite->y);
+    rotation -= 16384;
+
+    TrySetSpriteRotScale(sprite, TRUE, 0x100, 0x100, rotation);
+
+    sprite->callback = AnimDragonRushNew_Step;
+}
+
+void AnimDragonRushNew_Step(struct Sprite *sprite)
+{
+    sprite->data[4] += sprite->data[6];
+    sprite->data[5] += sprite->data[7];
+
+    sprite->x = sprite->data[4] >> 4;
+    sprite->y = sprite->data[5] >> 4;
+
+    if (sprite->x > DISPLAY_WIDTH + 45 || sprite->x < -45
+     || sprite->y > 157 || sprite->y < -45)
+        DestroySpriteAndMatrix(sprite);
+}
 
 static void AnimDragonRushStep(struct Sprite *sprite)
 {
