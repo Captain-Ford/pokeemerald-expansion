@@ -10184,9 +10184,10 @@ Move_POWER_UP_PUNCH:
 	monbg ANIM_TARGET
 	setalpha 12, 8
 	createvisualtask AnimTask_GrowAndShrink, 2
-	playsewithpan SE_M_METRONOME, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
 	waitforvisualfinish
-	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 8, 1, 0
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, 1, 1
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
 	waitforvisualfinish

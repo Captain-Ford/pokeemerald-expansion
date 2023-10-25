@@ -9,7 +9,7 @@
 #endif
 
 #if I_GEM_BOOST_POWER >= GEN_6
-    #define GEM_BOOST_PARAM 30
+    #define GEM_BOOST_PARAM 50
 #else
     #define GEM_BOOST_PARAM 50
 #endif
@@ -7548,7 +7548,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_REFLECT,
     },
 
-    [ITEM_TM_SHOCK_WAVE] =
+    [ITEM_TM_COUNTER] =
     {
         .name = _("TM34"),
         .price = 3000,
@@ -7557,7 +7557,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_SHOCK_WAVE,
+        .secondaryId = MOVE_COUNTER,
     },
 
     [ITEM_TM_FLAMETHROWER] =
@@ -7632,7 +7632,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_AERIAL_ACE,
     },
 
-    [ITEM_TM_TORMENT] =
+    [ITEM_TM_MIRROR_COAT] =
     {
         .name = _("TM41"),
         .price = 3000,
@@ -7641,7 +7641,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_TORMENT,
+        .secondaryId = MOVE_MIRROR_COAT,
     },
 
     [ITEM_TM_BODY_SLAM] =
@@ -7728,7 +7728,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_WILL_O_WISP,
     },
 
-    [ITEM_TM_SNATCH] =
+    [ITEM_TM_SUBSTITUTE] =
     {
         .name = _("TM49"),
         .price = 3000,
@@ -7737,7 +7737,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_SNATCH,
+        .secondaryId = MOVE_SUBSTITUTE,
     },
 
     [ITEM_TM_OVERHEAT] =

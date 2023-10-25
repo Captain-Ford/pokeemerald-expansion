@@ -35,14 +35,14 @@
     F(BRICK_BREAK) \
     F(DOUBLE_TEAM) \
     F(REFLECT) \
-    F(SHOCK_WAVE) \
+    F(COUNTER) \
     F(FLAMETHROWER) \
     F(SLUDGE_BOMB) \
     F(SANDSTORM) \
     F(FIRE_BLAST) \
     F(ROCK_TOMB) \
     F(AERIAL_ACE) \
-    F(TORMENT) \
+    F(MIRROR_COAT) \
     F(BODY_SLAM) \
     F(SECRET_POWER) \
     F(REST) \
@@ -50,7 +50,7 @@
     F(THIEF) \
     F(STEEL_WING) \
     F(WILL_O_WISP) \
-    F(SNATCH) \
+    F(SUBSTITUTE) \
     F(OVERHEAT) \
     F(FIRE_PUNCH) \
     F(THUNDER_PUNCH) \
